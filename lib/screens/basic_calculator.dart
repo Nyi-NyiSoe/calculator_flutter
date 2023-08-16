@@ -2,6 +2,7 @@ import 'package:calculator/screens/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/components/buttons.dart';
 import 'package:calculator/components/constant_text.dart' as constants;
+import 'package:calculator/components/calculate.dart';
 
 class BasicCalculator extends StatefulWidget {
  
@@ -13,7 +14,7 @@ class BasicCalculator extends StatefulWidget {
 
 class _BasicCalculatorState extends State<BasicCalculator> {
     var userQuestion ='';
-    var answer ='answer';
+    var answer ='';
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +77,17 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                     textColor: Colors.white,
                   );
                   
+                 }else if(index == constants.buttonText.length-1){
+                  return ButtonsComponent(
+                    onTap: () {
+                      setState(() {
+                        answer = calculate(userQuestion);
+                      });
+                    },
+                    buttonText: constants.buttonText[index],
+                    buttonColor:Colors.red,
+                    textColor: Colors.white,
+                  );
                  }else{
                    return ButtonsComponent(
                     onTap: () {
