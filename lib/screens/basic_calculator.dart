@@ -85,7 +85,7 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                       });
                     },
                     buttonText: constants.buttonText[index],
-                    buttonColor:Colors.red,
+                    buttonColor:Colors.blue,
                     textColor: Colors.white,
                   );
                  }else{
