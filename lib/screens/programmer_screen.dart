@@ -8,9 +8,11 @@ class ProgrammerCalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(title: Text('Programmer Calculator'),
-      backgroundColor: Colors.black,
-      ),drawer: NavigationDrawerScreen(),
+      appBar: AppBar(
+        title: Text('Programmer Calculator'),
+        backgroundColor: Colors.black,
+      ),
+      drawer: NavigationDrawerScreen(),
     ));
   }
 }
