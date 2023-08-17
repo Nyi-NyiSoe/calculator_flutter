@@ -1,3 +1,7 @@
+import 'package:calculator/screens/currency.dart';
+import 'package:calculator/screens/length.dart';
+import 'package:calculator/screens/programmer_screen.dart';
+import 'package:calculator/screens/scientific_calculator.dart';
 import 'package:flutter/material.dart';
 import 'screens/basic_calculator.dart';
 
@@ -11,11 +15,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: BasicCalculator(),
-      
+      initialRoute: BasicCalculator.id,
+      routes: {
+        BasicCalculator.id:(context) => BasicCalculator(),
+        ScientificCalculator.id:(context) => ScientificCalculator(),
+        ProgrammerCalculator.id:(context) => ProgrammerCalculator(),
+        Currency.id:(context) => Currency(),
+         Length.id:(context) => Length(),
+      },
     );
   }
 }

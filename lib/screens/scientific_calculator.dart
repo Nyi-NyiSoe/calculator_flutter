@@ -1,7 +1,8 @@
-import 'package:calculator/screens/navigation_drawer.dart';
+import 'package:calculator/components/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ScientificCalculator extends StatelessWidget {
+  static const String id = 'Scientific Calculator';
   const ScientificCalculator({super.key});
 
   @override

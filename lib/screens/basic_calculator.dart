@@ -1,10 +1,11 @@
-import 'package:calculator/screens/navigation_drawer.dart';
+import 'package:calculator/components/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/components/buttons.dart';
 import 'package:calculator/components/constant_text.dart' as constants;
 import 'package:calculator/components/calculate.dart';
 
 class BasicCalculator extends StatefulWidget {
+  static const String id = 'Basic Calculator';
  
   const BasicCalculator({super.key});
 
