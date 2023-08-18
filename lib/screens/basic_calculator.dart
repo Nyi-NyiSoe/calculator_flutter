@@ -48,11 +48,14 @@ class _BasicCalculatorState extends State<BasicCalculator> {
         Expanded(
             flex: 6,
             child: Container(
-              padding: EdgeInsets.all(11),
+              //padding: EdgeInsets.all(11),
               color: Colors.white,
               child: GridView.builder(
-                itemCount: constants.buttonText.length,
+                
+                itemCount: constants.basicCalculatorText.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 8,
                     crossAxisCount: 4),
                 itemBuilder: (context, index) {
                  if(index == 0){
@@ -62,7 +65,7 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                         userQuestion = '';
                       });
                     },
-                    buttonText: constants.buttonText[index],
+                    buttonText: constants.basicCalculatorText[index],
                     buttonColor:Colors.green,
                     textColor: Colors.white,
                   );
@@ -73,19 +76,19 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                         userQuestion = userQuestion.substring(0,userQuestion.length-1);
                       });
                     },
-                    buttonText: constants.buttonText[index],
+                    buttonText: constants.basicCalculatorText[index],
                     buttonColor:Colors.red,
                     textColor: Colors.white,
                   );
                   
-                 }else if(index == constants.buttonText.length-1){
+                 }else if(index == constants.basicCalculatorText.length-1){
                   return ButtonsComponent(
                     onTap: () {
                       setState(() {
                         answer = calculate(userQuestion);
                       });
                     },
-                    buttonText: constants.buttonText[index],
+                    buttonText: constants.basicCalculatorText[index],
                     buttonColor:Colors.blue,
                     textColor: Colors.white,
                   );
@@ -93,12 +96,12 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                    return ButtonsComponent(
                     onTap: () {
                       setState(() {
-                        userQuestion += constants.buttonText[index];
+                        userQuestion += constants.basicCalculatorText[index];
                       });
                     },
-                    buttonText: constants.buttonText[index],
-                    buttonColor:isOperator(constants.buttonText[index]) ? Colors.blue : Colors.grey.shade200,
-                    textColor: isOperator(constants.buttonText[index]) ? Colors.white : Colors.blue,
+                    buttonText: constants.basicCalculatorText[index],
+                    buttonColor:isOperator(constants.basicCalculatorText[index]) ? Colors.blue : Colors.grey.shade200,
+                    textColor: isOperator(constants.basicCalculatorText[index]) ? Colors.white : Colors.blue,
                   );
                  }
                 },
