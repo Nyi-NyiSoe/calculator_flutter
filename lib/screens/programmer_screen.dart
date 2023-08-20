@@ -10,10 +10,10 @@ class ProgrammerCalculator extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: Text('Programmer Calculator'),
+        title: const Text('Programmer Calculator'),
         backgroundColor: Colors.black,
       ),
-      drawer: NavigationDrawerScreen(),
+      drawer: const NavigationDrawerScreen(),
     ));
   }
 }

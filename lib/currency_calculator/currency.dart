@@ -13,7 +13,7 @@ class Currency extends StatelessWidget {
         title:const Text('Currency Converter'),
         backgroundColor: Colors.deepOrange,
       ),
-      drawer: NavigationDrawerScreen(),
+      drawer: const NavigationDrawerScreen(),
     ));
   }
 }

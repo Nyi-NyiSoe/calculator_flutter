@@ -1,9 +1,9 @@
-import 'package:calculator/screens/basic_calculator.dart';
-import 'package:calculator/screens/currency.dart';
-import 'package:calculator/screens/length.dart';
+import 'package:calculator/basic_calculator/basic_calculator.dart';
+import 'package:calculator/currency_calculator/currency.dart';
+import 'package:calculator/length_calculator/length.dart';
 import 'package:calculator/screens/scientific_calculator.dart';
 import 'package:calculator/screens/programmer_screen.dart';
-import 'package:calculator/screens/temperature.dart';
+import 'package:calculator/temperature_calculator/temperature.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,10 +16,14 @@ const List<String> basicCalculatorText = [
 ];
 
 const List<String> temperatureText = [
-  '7',   '8',   '9' ,  'CE',
-  '4',   '5' ,  '6' ,  'DEL',
-  '1',   '2' ,  '3' ,  '-',
-  '',   ' . ', ' 0',  ''
+  '9',   '8',   '7' ,  'CE',
+  '6',   '5' ,  '4' ,  'DEL',
+  '3',   '2' ,  '1' ,  '',
+  '-',   '.', '0',  '='
+];
+
+const List<String> temperatures = [
+  'Celcius','Fahrenheit','Kelvin'
 ];
 
 const Map<String,Icon> calculatorRouteIcons = {
@@ -30,6 +34,6 @@ const Map<String,Icon> calculatorRouteIcons = {
 
 const Map<String,Icon> converterRouteIcons ={
   Currency.id : Icon(Icons.currency_exchange),
-  Length.id : Icon(Icons.rule),
+  Length.id : Icon(Icons.design_services),
   Temperature.id: Icon(Icons.thermostat)
 };

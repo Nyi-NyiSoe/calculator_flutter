@@ -2,7 +2,7 @@ import 'package:calculator/components/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/components/buttons.dart';
 import 'package:calculator/components/constant_text.dart' as constants;
-import 'package:calculator/components/calculate.dart';
+import 'package:calculator/basic_calculator/calculate.dart';
 
 class BasicCalculator extends StatefulWidget {
   static const String id = 'Basic Calculator';
@@ -33,14 +33,14 @@ class _BasicCalculatorState extends State<BasicCalculator> {
               children: [
                 const SizedBox(height: 10,),
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   alignment: Alignment.centerLeft,
-                  child: Text(userQuestion,style: TextStyle(fontSize: 20),),),
+                  child: Text(userQuestion,style: const TextStyle(fontSize: 20),),),
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                    alignment: Alignment.centerRight,
                   
-                  child: Text(answer,style: TextStyle(fontSize: 20),),)
+                  child: Text(answer,style: const TextStyle(fontSize: 20),),)
               ],
             ),
           ),

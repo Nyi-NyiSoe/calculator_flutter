@@ -9,9 +9,9 @@ class ScientificCalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(title: Text('Scientific Calculator'),
+      appBar: AppBar(title: const Text('Scientific Calculator'),
       backgroundColor: Colors.greenAccent.shade400
-      ),drawer: NavigationDrawerScreen(),
+      ),drawer:const NavigationDrawerScreen(),
     ));
   }
 }
