@@ -73,8 +73,10 @@ class _TemperatureState extends State<Temperature> {
                   Column(
                     children: [
                       DropDown(
+
                       items: constants.temperatures,
                       selectedValue: selectedTemp ,
+                      color: Colors.pinkAccent,
                       onChanged: (newValue){
                        setState(() {
                           selectedTemp = newValue ?? 'Celcius';

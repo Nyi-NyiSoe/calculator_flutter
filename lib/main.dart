@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         BasicCalculator.id:(context) => const BasicCalculator(),
         ScientificCalculator.id:(context) =>const ScientificCalculator(),
         ProgrammerCalculator.id:(context) =>const ProgrammerCalculator(),
-        Currency.id:(context) =>const Currency(),
+        Currency.id:(context) => Currency(),
          Length.id:(context) =>const Length(),
          Temperature.id:(context) =>const Temperature()
       },

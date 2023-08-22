@@ -26,6 +26,10 @@ const List<String> temperatures = [
   'Celcius','Fahrenheit','Kelvin'
 ];
 
+const List<String> measurements = [
+  'Nanometers','Microns','Millimeters','Centimeters','Meters','Kilometers','Inches','Feet','Yards','Miles', 'Nauctical Miles'
+];
+
 const Map<String,Icon> calculatorRouteIcons = {
   BasicCalculator.id : Icon(Icons.calculate),
   ScientificCalculator.id : Icon(Icons.science),

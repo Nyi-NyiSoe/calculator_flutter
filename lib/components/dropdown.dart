@@ -5,23 +5,25 @@ class DropDown extends StatelessWidget {
   final List<String> items;
   late String? selectedValue;
   final Function(String?)? onChanged;
+  final color;
 
   DropDown({
-    super.key,
+    Key? key,
+    required this.color, // Use the key parameter properly
     required this.items,
     required this.selectedValue,
     required this.onChanged,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          color: Colors.pinkAccent, borderRadius: BorderRadius.circular(10)),
+          color: color, borderRadius: BorderRadius.circular(10)),
       child: DropdownButton<String>(
         borderRadius: BorderRadius.circular(10),
-        dropdownColor: Colors.pinkAccent,
+        dropdownColor: color,
         value: selectedValue,
         items: items.map((String value) {
           return DropdownMenuItem<String>(
