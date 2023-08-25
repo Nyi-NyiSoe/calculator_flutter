@@ -32,6 +32,8 @@ class _CurrencyState extends State<Currency> {
         ),
         drawer: const NavigationDrawerScreen(),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
            Row(
             children: [
@@ -51,7 +53,7 @@ class _CurrencyState extends State<Currency> {
              setState(() {
                c1=double.parse(value);
              });
-           },))
+           },keyboardType: TextInputType.number,))
             ],
            ),
             Row(

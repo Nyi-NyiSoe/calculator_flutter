@@ -87,7 +87,7 @@ class _LengthState extends State<Length> {
               selectedValue2,
               Text(
                 answer!.toString(),
-                style: const TextStyle(fontSize: 40),
+                style: const TextStyle(fontSize: 20,overflow: TextOverflow.clip),
               ), (newValue) {
             setState(() {
               selectedValue2 = newValue;
