@@ -75,7 +75,7 @@ class _CurrencyState extends State<Currency> {
            ),
            const SizedBox(height: 10,),
            ButtonsComponent(buttonText: 'Convert',buttonColor: Colors.orangeAccent,onTap: ()async{
-           var multiplyer = await currency_data.CurrencyData().exchange(selectedValue1);
+           var multiplyer = await currency_data.CurrencyData().exchange(selectedValue1,selectedValue2);
             result = c1 * multiplyer ;
             print(result);
             setState(() {

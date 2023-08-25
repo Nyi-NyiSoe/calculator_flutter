@@ -174,19 +174,20 @@ const currencies = [
     "ZWL"
 ];
 
-const url = "http://api.exchangeratesapi.io/v1/latest?access_key=";
-const apikey = "0e4941a67836f5644f5ea68d3007b828";
+const url = "https://free.currconv.com/api/v7/convert?q=";
+const apikey = "5bdf8a9cf43a60158e5e";
    
 class CurrencyData {
-  Future exchange(String? selectedCurrency1)async{
-    String requestURL ="$url$apikey";
+  Future exchange(String? selectedCurrency1,String? selectedCurrency2)async{
+    String requestURL ="$url${selectedCurrency1}_$selectedCurrency2&compact=ultra&apiKey=$apikey";
     http.Response response = await http.get(Uri.parse(requestURL));
     if(response.statusCode == 200){
       var decodeData = jsonDecode(response.body);
       
-      print(decodeData['rates'][selectedCurrency1]);
-       return decodeData['rates'][selectedCurrency1];
+      var plyer = decodeData["${selectedCurrency1}_$selectedCurrency2"];
+    return plyer;
     }
+    
 
    
 
