@@ -17,26 +17,35 @@ class _BasicCalculatorState extends State<BasicCalculator> {
     var userQuestion ='';
     var answer ='';
 
+   
+
   @override
   Widget build(BuildContext context) {
+     bool isLargeScreen= MediaQuery.of(context).size.height>700;
     return SafeArea(
         child: Scaffold(
+          
       appBar: AppBar(title: const Text('Basic Calculator')),
       drawer: const NavigationDrawerScreen(),
-      body: Column(children: [
+      body: Column(
+        
+        children: [
         Expanded(
+         
             child: Container(
           color: Colors.white,
           child: SingleChildScrollView(
             child: Column(
-              
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const SizedBox(height: 10,),
                 Container(
+
                   padding: const EdgeInsets.all(5),
                   alignment: Alignment.centerLeft,
                   child: Text(userQuestion,style: const TextStyle(fontSize: 20),),),
                 Container(
+                 height: isLargeScreen ? 350 : null,
                   padding: const EdgeInsets.all(5),
                    alignment: Alignment.centerRight,
                   
@@ -46,7 +55,7 @@ class _BasicCalculatorState extends State<BasicCalculator> {
           ),
         )),
         Expanded(
-            flex: 6,
+            flex: isLargeScreen ? 2 : 6,
             child: Container(
               //padding: EdgeInsets.all(11),
               color: Colors.white,
@@ -76,6 +85,7 @@ class _BasicCalculatorState extends State<BasicCalculator> {
                         userQuestion = userQuestion.substring(0,userQuestion.length-1);
                       });
                     },
+                    
                     buttonText: constants.basicCalculatorText[index],
                     buttonColor:Colors.red,
                     textColor: Colors.white,
@@ -119,3 +129,5 @@ bool isOperator(String x ){
   }
   return false;
 }
+
+
